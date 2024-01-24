@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import { useUser } from "./UserContext";
+import { URL_CONSTANT } from "./apiUrl";
 
 interface ThreadId {
   threadId: number;
@@ -29,7 +30,7 @@ const CommentAdd: React.FC<ThreadId> = ({ threadId }) => {
         under: under,
         author: username,
       };
-      fetch("http://127.0.0.1:3000/api/v1/comments/?", {
+      fetch(`${URL_CONSTANT}/api/v1/comments?`, {
         method: "POST",
         headers: {
           Accept: "application/json",

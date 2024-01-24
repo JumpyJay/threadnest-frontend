@@ -19,6 +19,7 @@ import CircleIcon from "@mui/icons-material/Circle";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import { Chip } from "@mui/material";
 import CommentAdd from "./AddComment";
+import { URL_CONSTANT } from "./apiUrl";
 
 interface Writing {
   id: number;
@@ -49,7 +50,7 @@ const style = {
 
 const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, writing }) => {
   const { username } = useUser();
-  const apiurl = `http://127.0.0.1:3000/api/v1/writings/${writing.id}`;
+  const apiurl = `${URL_CONSTANT}/api/v1/writings/${writing.id}`;
 
   const userDelete = (event: { preventDefault: () => void }) => {
     fetch(apiurl, {

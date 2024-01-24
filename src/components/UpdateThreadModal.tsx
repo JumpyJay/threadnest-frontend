@@ -9,6 +9,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import { useState } from "react";
 import { useUser } from "./UserContext";
+import { URL_CONSTANT } from "./apiUrl";
 
 interface UpdateThreadFieldsProps {
   id: number;
@@ -18,7 +19,7 @@ const UpdateThreadFields: React.FC<UpdateThreadFieldsProps> = ({ id }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [under, setunder] = React.useState(1);
-  const apiurl = `http://127.0.0.1:3000/api/v1/writings/${id}`;
+  const apiurl = `${URL_CONSTANT}/api/v1/writings/${id}`;
 
   const { username } = useUser();
 

@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import { URL_CONSTANT } from "./apiUrl";
 
 interface UpdateCommentFieldsProps {
   id: number;
@@ -14,7 +15,7 @@ const UpdateCommentFields: React.FC<UpdateCommentFieldsProps> = ({
   onClose,
 }) => {
   const [body, setBody] = useState("");
-  const apiurl = `http://127.0.0.1:3000/api/v1/comments/${id}`;
+  const apiurl = `${URL_CONSTANT}/api/v1/comments/${id}`;
 
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();

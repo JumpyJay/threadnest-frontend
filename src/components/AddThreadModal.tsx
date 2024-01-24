@@ -9,6 +9,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import { useState } from "react";
 import { useUser } from "./UserContext";
+import { URL_CONSTANT } from "./apiUrl";
 
 export default function AddThreadFields() {
   const [title, setTitle] = useState("");
@@ -29,7 +30,7 @@ export default function AddThreadFields() {
       author: username,
       under: under,
     };
-    fetch("http://127.0.0.1:3000/api/v1/writings/?", {
+    fetch(`${URL_CONSTANT}/api/v1/writings?`, {
       method: "POST",
       headers: {
         Accept: "application/json",

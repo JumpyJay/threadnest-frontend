@@ -10,7 +10,7 @@ const TagContext = createContext<TagContextProps | undefined>(undefined);
 export const TagProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [Tag, setTag] = useState<number | "">("");
+  const [Tag, setTag] = useState<number | "">(0);
 
   const setLoggedTag = (newTag: number | "") => {
     setTag(newTag);

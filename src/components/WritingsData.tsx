@@ -18,6 +18,7 @@ import cat4 from "../assets/cat7.jpeg";
 import cat5 from "../assets/cat5.jpeg";
 import cat6 from "../assets/cat6.jpeg";
 import cat7 from "../assets/cat3.jpeg";
+import { URL_CONSTANT } from "./apiUrl";
 
 interface Writing {
   id: number;
@@ -53,7 +54,7 @@ const BasicTable: React.FC = () => {
   const { Tag } = useTag();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/api/v1/writings?")
+    fetch(`${URL_CONSTANT}/api/v1/writings?`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);

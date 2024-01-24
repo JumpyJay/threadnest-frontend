@@ -10,6 +10,7 @@ import Person2Icon from "@mui/icons-material/Person2";
 import UpdateCommentButton from "./UpdateCommentButton";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useUser } from "./UserContext";
+import { URL_CONSTANT } from "./apiUrl";
 
 interface Comment {
   id: number;
@@ -28,7 +29,7 @@ const BasicCTable: React.FC<ThreadId> = ({ threadId }) => {
   const { username } = useUser();
 
   const commentDelete = (commentId: number): void => {
-    fetch(`http://127.0.0.1:3000/api/v1/comments/${commentId}`, {
+    fetch(`${URL_CONSTANT}/api/v1/comments/${commentId}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -52,7 +53,7 @@ const BasicCTable: React.FC<ThreadId> = ({ threadId }) => {
   const fetchComments = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:3000/api/v1/comments/${threadId}`
+        `${URL_CONSTANT}/api/v1/comments/${threadId}`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
