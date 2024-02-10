@@ -160,6 +160,16 @@ const BasicTable: React.FC = () => {
 
               return isTitleMatch && isTagMatch;
             })
+            .filter(
+              (writing) =>
+                !!writing.created_at &&
+                !isNaN(new Date(writing.created_at).getTime())
+            ) // Filter out invalid dates
+            .sort((a, b) => {
+              const dateA = new Date(a.created_at).getTime();
+              const dateB = new Date(b.created_at).getTime();
+              return dateB - dateA;
+            })
             .map((writing) => (
               <TableRow
                 key={writing.id}
