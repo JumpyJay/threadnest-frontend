@@ -9,7 +9,7 @@ ThreadNest is a React-based frontend application for the ThreadNest forum platfo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/threadnest-frontend.git
+   git clone https://github.com/JumpyJay/threadnest-frontend.git
    cd threadnest-frontend
    ```
 
@@ -36,7 +36,7 @@ ThreadNest is a React-based frontend application for the ThreadNest forum platfo
 
 - Create, view, edit, and delete threads.
 - Add and manage comments on threads.
-- User authentication (login and signup).
+- User authentication.
 - Responsive design for all devices.
 
 ---
