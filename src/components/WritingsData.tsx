@@ -115,7 +115,6 @@ const BasicTable: React.FC = () => {
   };
 
   const classes = useStyles();
-  const textclasses = useTextStyles();
 
   return (
     <TableContainer component={Paper}>

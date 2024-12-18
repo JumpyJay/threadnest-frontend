@@ -148,7 +148,7 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, writing }) => {
   ////////////////////////////////////////////////////
 
   const renderUpdDelButton = () => {
-    if (username == writing.author) {
+    if (username === writing.author) {
       return (
         <div>
           <UpdateThreadButton id={writing.id} />
