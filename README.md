@@ -1,6 +1,6 @@
-# ThreadNest Backend
+# ThreadNest Frontend
 
-ThreadNest is a Rails API backend that powers the ThreadNest forum platform, handling authentication, threads, comments, and more.
+ThreadNest is a React-based frontend application for the ThreadNest forum platform. It connects to a Rails API backend to provide a seamless forum experience.
 
 ---
 
@@ -9,38 +9,40 @@ ThreadNest is a Rails API backend that powers the ThreadNest forum platform, han
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/threadnest-backend.git
-   cd threadnest-backend
+   git clone https://github.com/yourusername/threadnest-frontend.git
+   cd threadnest-frontend
    ```
 
 2. Install dependencies:
 
    ```bash
-   bundle install
+   npm install
    ```
 
-3. Set up the database:
+3. Create a `.env` file:
 
-   ```bash
-   rails db:create db:migrate db:seed
+   ```env
+   REACT_APP_API_BASE_URL=http://localhost:3000/api/v1
    ```
 
-4. Start the Rails server:
+4. Start the development server:
    ```bash
-   rails server
+   npm start
    ```
 
 ---
 
 ## Features
 
-- Token-based user authentication.
-- CRUD operations for threads and comments.
-- RESTful API for frontend integration.
+- Create, view, edit, and delete threads.
+- Add and manage comments on threads.
+- User authentication (login and signup).
+- Responsive design for all devices.
 
 ---
 
 ## Technologies Used
 
-- **Ruby on Rails** - API development framework.
-- **PostgreSQL** - Database for data storage.
+- **React** - User interface library.
+- **React Router** - Routing for navigation.
+- **TailwindCSS** - For styling the application.
